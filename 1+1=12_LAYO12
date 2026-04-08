@@ -1,0 +1,14 @@
+# أضف هذا الجزء داخل f.write في sovereign_app.py
+st.markdown("---")
+st.subheader("📝 سجل الضربات الحية (Live Logs)")
+log_data = {
+    "التوقيت": [datetime.now().strftime("%H:%M:%S")],
+    "العملية": ["اقتناص سيولة JPY"],
+    "الهدف": ["العرين المركزي"],
+    "الحالة": ["✅ نجاح"]
+}
+st.table(pd.DataFrame(log_data))
+
+# إضافة زر الربط اليدوي بالجسر
+if st.button("تفعيل الجسر الرقمي يدوياً"):
+    st.write("🚀 جاري توجيه الموارد من طوكيو إلى نيويورك...")
