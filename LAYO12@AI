@@ -1,0 +1,17 @@
+# وحدة مراقبة المبيعات السيارة - بروتوكول 1121
+class SovereignMobileUnit:
+    def __init__(self, unit_id, route):
+        self.unit_id = unit_id
+        self.route = route
+        self.daily_sales = 0
+
+    def record_sale(self, amount):
+        self.daily_sales += amount
+        print(f"الوحدة {self.unit_id} على طريق {self.route}: تم تسجيل بيع بقيمة {amount} MAD")
+
+# توزيع الأسطول (4 اتجاه سبتة / 4 اتجاه واد لو)
+fleet_north = [SovereignMobileUnit(i, "Sebta") for i in range(1, 5)]
+fleet_east = [SovereignMobileUnit(i, "Oued_Laou") for i in range(5, 9)]
+
+# حالة النظام السيادي
+print("VP = Σ - 88 > 1+1=12")
